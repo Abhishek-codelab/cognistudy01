@@ -30,11 +30,31 @@ window.loginUser = function () {
 
     .then((userCredential) => {
 
-        alert("✅ Login Successful");
+    const user = userCredential.user;
 
-        window.location.href ="dashboard.html";
+    const userData = {
 
-    })
+        name: user.email.split("@")[0],
+
+        email: user.email
+    };
+
+    localStorage.setItem(
+        "cogniUser",
+        JSON.stringify(userData)
+    );
+
+    localStorage.setItem(
+        "loggedIn",
+        "true"
+    );
+
+    alert("✅ Login Successful");
+
+    window.location.href =
+    "dashboard.html";
+
+})
 
     .catch((error) => {
 
