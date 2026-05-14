@@ -1,41 +1,46 @@
-// const email = document.querySelector('input[type="email"]').value;
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
 
-// // store ONLY username (not full object)
-// localStorage.setItem("username", email.split("@")[0]);
+import {
+  getAuth,
+  signInWithEmailAndPassword
+} from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 
+const firebaseConfig = {
+  apiKey: "AIzaSyCEXk2QydAYGAS7bEftBTTIhkELr0cx-Bs",
+  authDomain: "cognistudy-2a30a.firebaseapp.com",
+  projectId: "cognistudy-2a30a",
+  storageBucket: "cognistudy-2a30a.firebasestorage.app",
+  messagingSenderId: "585491655217",
+  appId: "1:585491655217:web:1b6dd8ec3399b538de4310"
+};
 
+const app = initializeApp(firebaseConfig);
 
-function loginUser(){
+const auth = getAuth(app);
+
+window.loginUser = function () {
 
     const email =
-        document.getElementById("email").value;
+    document.getElementById("email").value;
 
     const password =
-        document.getElementById("password").value;
+    document.getElementById("password").value;
 
-    const savedUser =
-        JSON.parse(localStorage.getItem("cogniUser"));
+    signInWithEmailAndPassword(auth, email, password)
 
-    if(!savedUser){
-        alert("No account found");
-        return;
-    }
+    .then((userCredential) => {
 
-    if(
-        email === savedUser.email &&
-        password === savedUser.password
-    ){
-
-        localStorage.setItem(
-            "isLoggedIn",
-            "true"
-        );
+        alert("✅ Login Successful");
 
         window.location.href =
-            "dashboard.html";
+        "dashboard.html";
 
-    }else{
+    })
 
-        alert("Wrong Email or Password");
-    }
+    .catch((error) => {
+
+        alert(error.message);
+
+    });
+
 }
