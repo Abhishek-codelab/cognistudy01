@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Deadline</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #020617;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .container {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 16px;
+            width: 350px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from {opacity:0; transform: translateY(20px);}
+            to {opacity:1; transform: translateY(0);}
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: none;
+            background: #334155;
+            color: white;
+            font-size: 14px;
+        }
+
+        input::placeholder {
+            color: #94a3b8;
+        }
+
+        input:focus {
+            outline: none;
+            background: #3b4a61;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            background: linear-gradient(135deg,#3b82f6,#6366f1);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(99,102,241,0.4);
+        }
+
+        .back {
+            margin-top: 10px;
+            text-align: center;
+            cursor: pointer;
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        .back:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>📅 Add Deadline</h2>
+
+    <input type="text" id="taskName" placeholder="Enter task name">
+    <input type="date" id="taskDate">
+
+    <button class="btn" onclick="saveDeadline()">Save Deadline</button>
+
+    <div class="back" onclick="goBack()">← Back to Dashboard</div>
+</div>
+
+<script>
+function saveDeadline() {
+    const name = document.getElementById("taskName").value.trim();
+    const date = document.getElementById("taskDate").value;
+
+    if (!name || !date) {
+        alert("Please fill all fields");
+        return;
+    }
+
+    let deadlines = JSON.parse(localStorage.getItem("deadlines")) || [];
+
+    deadlines.push({
+        name: name,
+        date: date
+    });
+
+    localStorage.setItem("deadlines", JSON.stringify(deadlines));
+
+    window.location.href = "dashboard.html";
+}
+
+
+function goBack(){
+    window.location.href = "dashboard.html";
+}
+</script>
+
+</body>
+</html>

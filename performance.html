@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Performance - CogniStudy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="performance.css">
+</head>
+<body>
+
+
+
+    <!-- MAIN -->
+<div class="main">
+
+    <div class="container">
+
+        <!-- TOP -->
+        <div class="top-bar">
+            <div class="target">Today's Target</div>
+        </div>
+
+        <h2 class="title">📊 Performance Overview</h2>
+
+        <!-- GRAPH + DONUT -->
+        <div class="grid">
+
+            <div class="card big">
+                <h3>📈 Daily Activity Trend</h3>
+                <canvas id="studyChart"></canvas>
+            </div>
+
+            <div class="card">
+                <h3>🧠 Subject Allocation</h3>
+                <canvas id="subjectChart"></canvas>
+            </div>
+
+        </div>
+
+        <div class="card insight">
+            <p id="insightText"></p>
+        </div>
+    
+
+        <!-- STATS -->
+ <div class="stats">
+
+    <div class="card stat">
+        <div class="icon">📘</div>
+        <p>Average Study</p>
+        <h2 id="avgStudy">0h/day</h2>
+    </div>
+
+    <div class="card stat">
+        <div class="icon">🎯</div>
+        <p>Focus Ratio</p>
+        <h2 id="focusRatio">0%</h2>
+    </div>
+
+    <div class="card stat">
+        <div class="icon">🔥</div>
+        <p>Consistency</p>
+        <h2 id="consistency">0/100</h2>
+    </div>
+
+</div>
+
+    </div>
+
+</div>
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="performance.js"></script>
+
+</body>
+</html>

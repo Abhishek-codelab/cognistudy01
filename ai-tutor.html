@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tutor - CogniStudy</title>
+
+    <link rel="stylesheet" href="ai-tutor.css">
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h1 class="logo">🧠 CogniStudy</h1>
+
+        <nav>
+            <a href="dashboard.html">📊 Dashboard</a>
+            <a href="studyplanner.html">🗓️ Study Planner</a>
+            <a href="performance.html">📈 Performance</a>
+            <a href="community.html">👥 Community</a>
+            <a href="notes-vault.html">📚 Notes Vault</a>
+
+            <a href="ai-tutor.html" class="active">
+                🤖 AI Tutor
+            </a>
+
+            <a href="settings.html">⚙️ Settings</a>
+        </nav>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <div class="top-bar">
+
+            <div>
+                <h1 class="title">🤖 AI Tutor</h1>
+                <p class="subtitle">
+                    Ask doubts, generate explanations and learn smarter
+                </p>
+            </div>
+
+            <button class="back-btn" onclick="goBack()">
+                ← Back
+            </button>
+
+        </div>
+
+        <!-- QUICK ACTIONS -->
+
+        <div class="quick-grid">
+
+            <div class="quick-card">
+                <h2>📘 Explain Topic</h2>
+                <p>Understand concepts in simple language</p>
+            </div>
+
+            <div class="quick-card">
+                <h2>🧠 Quiz Generator</h2>
+                <p>Create MCQs instantly</p>
+            </div>
+
+            <div class="quick-card">
+                <h2>📝 Notes Summary</h2>
+                <p>Convert long notes into short summaries</p>
+            </div>
+
+            <div class="quick-card">
+                <h2>🗺️ Mindmap AI</h2>
+                <p>Create visual mindmaps from notes</p>
+            </div>
+
+        </div>
+
+        <!-- CHAT AREA -->
+
+        <section class="chat-section">
+
+            <div class="chat-header">
+                AI Study Assistant
+            </div>
+
+            <div class="chat-box" id="chatBox">
+
+                <div class="ai-message">
+                    Hello Alpha 👋<br><br>
+                    Ask me anything about Physics, DSA, Maths or Programming.
+                </div>
+
+            </div>
+
+            <div class="input-area">
+
+                <input
+                    type="text"
+                    id="userInput"
+                    placeholder="Ask your doubt..."
+                >
+
+                <button onclick="sendMessage()">
+                    Send
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="ai-tutor.js"></script>
+
+</body>
+</html>

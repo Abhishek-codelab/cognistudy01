@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - CogniStudy</title>
+
+    <link rel="stylesheet" href="settings.css">
+</head>
+
+<body>
+
+<div class="settings-page">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <h2 class="logo">🧠 CogniStudy</h2>
+
+        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="studyplanner.html">📅 Study Planner</a>
+        <a href="performance.html">📈 Performance</a>
+        <a href="notes-vault.html">📚 Notes Vault</a>
+        <a href="ai-tutor.html">🤖 AI Tutor</a>
+        <a href="community.html">👥 Community</a>
+
+
+
+        
+        <a class="active">⚙️ Settings</a>
+
+        <div class="bottom-user">
+            <img src="https://i.pravatar.cc/100" alt="">
+            <div>
+                <h4 id="profileName">Abhishek</h4>
+                <p>Level 5 Scholar</p>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- TOP -->
+        <div class="top-bar">
+
+            <div>
+                <h1>⚙️ Settings</h1>
+                <p>Manage your account and preferences</p>
+            </div>
+
+            <a href="dashboard.html" class="back-btn">
+                ← Back
+            </a>
+
+        </div>
+
+        <!-- PROFILE -->
+        <div class="card profile-card">
+
+            <div class="profile-left">
+
+                <img src="https://i.pravatar.cc/150" class="avatar">
+
+                <div>
+                    <h2 id="settingsName"></h2>
+
+                    <p id="settingsEmail"></p>
+
+                    <p id="settingsGoal"></p>
+                    
+                </div>
+
+            </div>
+
+            <div class="profile-edit">
+
+                <input type="text" id="usernameInput" placeholder="Change username">
+
+                <button onclick="saveUsername()">
+                    Save
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- APPEARANCE -->
+        <div class="card">
+
+            <h2>🎨 Appearance</h2>
+
+            <div class="setting-row">
+
+                <div>
+                    <h3>Dark Mode</h3>
+                    <p>Enable dark dashboard theme</p>
+                </div>
+
+                <button onclick="toggleDarkMode()" class="toggle-btn">
+                    Toggle
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- STUDY -->
+        <div class="card">
+
+            <h2>⏱ Study Preferences</h2>
+
+            <div class="setting-row">
+
+                <div>
+                    <h3>Pomodoro Timer</h3>
+                    <p>Default study session duration</p>
+                </div>
+
+                <input type="number" id="pomodoro" placeholder="25">
+
+            </div>
+
+        </div>
+
+        <!-- NOTIFICATIONS -->
+        <div class="card">
+
+            <h2>🔔 Notifications</h2>
+
+            <div class="setting-row">
+
+                <div>
+                    <h3>Study Reminders</h3>
+                    <p>Receive study notifications</p>
+                </div>
+
+                <input type="checkbox" id="notify">
+
+            </div>
+
+        </div>
+
+        <!-- ACCOUNT -->
+        <div class="card">
+
+            <h2>🛡 Account & Privacy</h2>
+
+            <div class="buttons">
+
+                <button class="danger">
+                    Reset Data
+                </button>
+
+                <button>
+                    Export Study Data
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="settings.js"></script>
+
+</body>
+</html>

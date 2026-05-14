@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Planner - CogniStudy</title>
+
+    <link rel="stylesheet" href="studyplanner.css">
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h1 class="logo">🧠 CogniStudy</h1>
+
+        <nav>
+            <a href="dashboard.html">📊 Dashboard</a>
+
+            <a href="studyplanner.html" class="active">
+                🗓️ Study Planner
+            </a>
+
+            <a href="performance.html">📈 Performance</a>         
+            <a href="notes-vault.html">📚 Notes Vault</a>
+            <a href="ai-tutor.html">🤖 AI Tutor</a>
+            <a href="community.html">👥 Community</a>
+            <a href="settings.html">⚙️ Settings</a>
+        </nav>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <!-- TOP -->
+
+        <div class="top-bar">
+
+            <div>
+                <h1 class="title">🤖 AI Study Planner</h1>
+
+                <p class="subtitle">
+                    Create smart AI-powered study schedules
+                </p>
+            </div>
+
+            <button class="back-btn" onclick="goBack()">
+                ← Back
+            </button>
+
+        </div>
+
+        <!-- AI INPUT -->
+
+        <section class="ai-box">
+
+            <h2>Create Study Plan</h2>
+
+            <div class="input-grid">
+
+                <input
+                    type="text"
+                    id="goalInput"
+                    placeholder="Goal (Example: Learn DSA)"
+                >
+
+                <input
+                    type="text"
+                    id="hoursInput"
+                    placeholder="Daily Study Hours"
+                >
+
+                <input
+                    type="text"
+                    id="daysInput"
+                    placeholder="Days Left"
+                >
+
+                <button onclick="generatePlan()">
+                    Generate AI Plan
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- AI STATS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <h1 id="topicsCount">0</h1>
+                <p>Topics Planned</p>
+            </div>
+
+            <div class="stat-card">
+                <h1 id="hoursCount">0h</h1>
+                <p>Total Hours</p>
+            </div>
+
+            <div class="stat-card">
+                <h1 id="daysCount">0</h1>
+                <p>Study Days</p>
+            </div>
+
+            <div class="stat-card">
+                <h1 id="productivityScore">0%</h1>
+                <p>AI Productivity</p>
+            </div>
+
+        </section>
+
+        <!-- GENERATED PLAN -->
+
+        <section class="plan-section">
+
+            <div class="section-title">
+                🧠 AI Generated Schedule
+            </div>
+
+            <div id="planContainer" class="plan-container">
+
+                <div class="empty-box">
+                    Your AI study plan will appear here.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="studyplanner.js"></script>
+
+</body>
+</html>

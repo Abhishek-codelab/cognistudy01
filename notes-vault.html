@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes Vault - CogniStudy</title>
+
+    <link rel="stylesheet" href="notes-vault.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h1 class="logo">🧠 CogniStudy</h1>
+
+        <nav>
+
+            <a href="dashboard.html">📊 Dashboard</a>
+
+            <a href="study-planner.html">🗓️ Study Planner</a>
+
+            <a href="performance.html">📈 Performance</a>
+
+            <a href="community.html">👥 Community</a>
+
+            <a href="notes-vault.html" class="active">
+                📚 Notes Vault
+            </a>
+
+            <a href="settings.html">⚙️ Settings</a>
+
+        </nav>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <!-- TOP -->
+
+        <div class="top-bar">
+
+            <div>
+                <h1 class="title">📚 Notes Vault</h1>
+
+                <p class="subtitle">
+                    Store notes, PDFs, formulas and AI resources
+                </p>
+            </div>
+
+            <div class="top-actions">
+
+                <button id="backBtn" class="back-btn">
+                    ← Back
+                </button>
+
+                <button id="uploadBtn" class="upload-btn">
+                    + Upload Notes
+                </button>
+
+                <input type="file" id="fileInput" hidden>
+
+            </div>
+
+        </div>
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search notes, PDFs, formulas..."
+            >
+
+        </div>
+
+        <!-- STATS -->
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <h1 id="totalNotes">0</h1>
+                <p>Total Notes</p>
+            </div>
+
+            <div class="stat-card">
+                <h1 id="totalSubjects">0</h1>
+                <p>Subjects</p>
+            </div>
+
+            <div class="stat-card">
+                <h1 id="totalPdf">0</h1>
+                <p>PDF Files</p>
+            </div>
+
+            <div class="stat-card">
+                <h1 id="storageUsed">0MB</h1>
+                <p>Storage Used</p>
+            </div>
+
+        </div>
+
+        <!-- FILTERS -->
+
+        <div class="filters">
+
+            <button class="filter-btn active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter-btn" data-filter="pdf">
+                PDF
+            </button>
+
+            <button class="filter-btn" data-filter="notes">
+                Notes
+            </button>
+
+            <button class="filter-btn" data-filter="formula">
+                Formula
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="ai"
+                id="aiMindmapBtn"
+            >
+                AI Mindmap
+            </button>
+
+        </div>
+
+        <!-- NOTES GRID -->
+
+        <div class="notes-grid">
+
+            <!-- CARD 1 -->
+
+            <div class="note-card" data-category="notes">
+
+                <div class="note-icon">📘</div>
+
+                <h2>DSA Revision Notes</h2>
+
+                <p>
+                    Arrays, trees and graph revision notes.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">#DSA</span>
+                    <span class="tag">#Revision</span>
+                </div>
+
+                <button class="open-btn">
+                    Open
+                </button>
+
+            </div>
+
+            <!-- CARD 2 -->
+
+            <div class="note-card" data-category="formula">
+
+                <div class="note-icon">📄</div>
+
+                <h2>Physics Formula Sheet</h2>
+
+                <p>
+                    Complete optics and mechanics formulas.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">#Physics</span>
+                    <span class="tag">#Formula</span>
+                </div>
+
+                <button class="open-btn">
+                    Open
+                </button>
+
+            </div>
+
+            <!-- CARD 3 -->
+
+            <div class="note-card" data-category="ai">
+
+                <div class="note-icon">🧠</div>
+
+                <h2>AI Prompt Library</h2>
+
+                <p>
+                    Smart prompts for productivity and AI tools.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">#AI</span>
+                    <span class="tag">#Prompt</span>
+                </div>
+
+                <button class="open-btn">
+                    Open
+                </button>
+
+            </div>
+
+            <!-- CARD 4 -->
+
+            <div class="note-card" data-category="pdf">
+
+                <div class="note-icon">📑</div>
+
+                <h2>Math PYQ PDF</h2>
+
+                <p>
+                    Previous year questions with solutions.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">#Math</span>
+                    <span class="tag">#PDF</span>
+                </div>
+
+                <button class="open-btn">
+                    Open
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="notes-vault.js"></script>
+
+</body>
+
+</html>

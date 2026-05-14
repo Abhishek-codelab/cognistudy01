@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Custom Timer</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #020617;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .box {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 16px;
+            width: 320px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            background: #334155;
+            color: white;
+            margin-bottom: 15px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            background: linear-gradient(135deg,#3b82f6,#6366f1);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .back {
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        .back:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>⏱ Set Custom Timer</h2>
+
+    <input type="number" id="minutes" placeholder="Enter minutes">
+
+    <button class="btn" onclick="saveTime()">Start Timer</button>
+
+    <div class="back" onclick="goBack()">← Back</div>
+</div>
+
+<script>
+function saveTime() {
+    const mins = document.getElementById("minutes").value;
+
+    if (!mins || mins <= 0) {
+        alert("Enter valid minutes");
+        return;
+    }
+
+    // save to localStorage
+    localStorage.setItem("customTime", mins);
+
+    // go back
+    window.location.href = "dashboard.html";
+}
+
+function goBack(){
+    window.location.href = "dashboard.html";
+}
+</script>
+
+</body>
+</html>
