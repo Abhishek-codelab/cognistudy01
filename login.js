@@ -49,7 +49,7 @@ window.loginUser = function () {
         "true"
     );
 
-    alert("✅ Login Successful");
+    alert(" Login Successful");
 
     window.location.href =
     "dashboard.html";

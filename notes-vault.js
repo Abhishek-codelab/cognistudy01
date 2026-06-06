@@ -207,7 +207,7 @@ fileInput.addEventListener("change", () => {
 
         const file = fileInput.files[0];
 
-        alert(file.name + " uploaded successfully 🚀");
+        alert(file.name + " uploaded successfully ");
 
     }
 

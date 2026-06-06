@@ -62,7 +62,7 @@ window.signupUser = function () {
             JSON.stringify(userData)
         );
 
-        alert("✅ Account Created Successfully");
+        alert(" Account Created Successfully");
 
         window.location.href = "login.html";
 

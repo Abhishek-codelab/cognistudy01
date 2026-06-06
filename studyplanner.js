@@ -45,19 +45,19 @@ function generatePlan(){
         card.innerHTML = `
 
             <div class="day-title">
-                📅 Day ${i}
+                 Day ${i}
             </div>
 
             <div class="topic">
-                📘 ${goal} - ${topics[i % topics.length]}
+                 ${goal} - ${topics[i % topics.length]}
             </div>
 
             <div class="topic">
-                ⏰ Study Duration: ${hours} Hours
+                 Study Duration: ${hours} Hours
             </div>
 
             <div class="topic">
-                🎯 AI Focus: Smart Revision + Practice
+                 AI Focus: Smart Revision + Practice
             </div>
 
         `;

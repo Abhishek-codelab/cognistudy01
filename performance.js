@@ -194,11 +194,11 @@ function updateInsight(data) {
     let msg = "";
 
     if (y === 0) {
-        msg = "⚠️ No study yesterday — let's bounce back today!";
+        msg = " No study yesterday — let's bounce back today!";
     } else if (y < t) {
-        msg = `📉 You studied ${y}h — try to reach your ${t}h target!`;
+        msg = ` You studied ${y}h — try to reach your ${t}h target!`;
     } else {
-        msg = `🔥 Great job! ${y}h completed — target achieved!`;
+        msg = ` Great job! ${y}h completed — target achieved!`;
     }
 
     document.getElementById("insightText").innerText = msg;

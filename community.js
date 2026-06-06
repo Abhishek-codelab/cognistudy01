@@ -32,14 +32,14 @@ function loadLeaderboard() {
 
 function loadChallenges() {
     document.getElementById("challenges").innerHTML = `
-        <p>🔥 7 Day Consistency (5/7)</p>
+        <p> 7 Day Consistency (5/7)</p>
     `;
 }
 
 function loadFeed() {
     document.getElementById("feed").innerHTML = `
-        <p>🎉 Abhishek completed 11h study!</p>
-        <p>🔥 Rahul reached 5 day streak</p>
+        <p> Abhishek completed 11h study!</p>
+        <p> Rahul reached 5 day streak</p>
     `;
 }
 
@@ -107,7 +107,7 @@ function renderPosts() {
 
             <div class="feed-actions">
                 <button class="like-btn" onclick="likePost(${post.id})">
-                    ❤️ ${post.likes}
+                     ${post.likes}
                 </button>
             </div>
 
@@ -129,10 +129,10 @@ function likePost(id) {
 
             let currentUser = "Abhishek";
 
-            // ❌ Already liked
+            //  Already liked
             if (p.likedUsers.includes(currentUser)) return p;
 
-            // ✅ Add like
+            //  Add like
             p.likedUsers.push(currentUser);
             p.likes = p.likedUsers.length;
         }
@@ -172,7 +172,7 @@ function renderChallenges() {
     challenges.forEach(c => {
         html += `
         <div class="card">
-            🔥 ${c.name} <br>
+             ${c.name} <br>
             ${c.users} joined <br><br>
             <button onclick="joinChallenge('${c.name}')">Join</button>
         </div>

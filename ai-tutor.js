@@ -28,7 +28,7 @@ function sendMessage() {
     aiDiv.classList.add("ai-message");
 
     aiDiv.innerHTML =
-        "🤖 AI Tutor is thinking...<br><br>" +
+        " AI Tutor is thinking...<br><br>" +
         "This feature will connect with Gemini/OpenAI API soon.";
 
     setTimeout(() => {
